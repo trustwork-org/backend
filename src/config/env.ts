@@ -8,6 +8,9 @@ const schema = z.object({
   SMTP_PORT: z.string().default('587'),
   SMTP_USER: z.string().email(),
   SMTP_PASS: z.string().min(1),
+  RPC_URL: z.string().url().default('https://rpc.sepolia-api.lisk.com'),
+  ESCROW_PLATFORM_ADDRESS: z.string().min(42),
+  DISPUTE_DAO_ADDRESS: z.string().min(42),
 });
 
 const parsed = schema.safeParse(process.env);
