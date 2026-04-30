@@ -3,6 +3,7 @@ import cors from 'cors';
 import helmet from 'helmet';
 import accountRoutes from './routes/account';
 import { errorHandler } from './middleware/errorHandler';
+import chatRoutes from './routes/chat';
 
 const app = express();
 
