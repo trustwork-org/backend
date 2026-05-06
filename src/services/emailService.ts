@@ -15,13 +15,13 @@ export const sendWelcomeEmail = (email: string, walletAddress: string) =>
     subject: 'Your TrustWork wallet address',
     html: `
       <h2>Welcome to TrustWork 🎉</h2>
-      <p>Your smart contract wallet has been created. Use this address to receive and send USDC on Lisk Network:</p>
+      <p>Your smart contract wallet has been created. Use this address to receive and send USDC on Ethereum Sepolia:</p>
       <p style="font-family:monospace;font-size:16px;background:#f5f5f5;padding:12px;border-radius:8px;">
         ${walletAddress}
       </p>
-      <p>To fund your wallet, send USDC to this address on the <strong>Lisk Network</strong>.</p>
-      <p>You can view your balance and transactions on 
-        <a href="https://sepolia-blockscout.lisk.com/address/${walletAddress}">Lisk Blockscout</a>.
+      <p>To fund your wallet, send USDC to this address on <strong>Ethereum Sepolia</strong>. You can mint testnet USDC at <a href="https://faucet.circle.com">faucet.circle.com</a>.</p>
+      <p>You can view your balance and transactions on
+        <a href="https://sepolia.etherscan.io/address/${walletAddress}">Sepolia Etherscan</a>.
       </p>
       <p>You can export your wallet private key anytime from your TrustWork profile for full self-custody.</p>
     `,

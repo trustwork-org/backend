@@ -12,6 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use('/api/account', accountRoutes);
+app.use('/api/chat', chatRoutes);
 
 app.use(errorHandler);
 
