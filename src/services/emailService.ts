@@ -10,7 +10,7 @@ const transporter = nodemailer.createTransport({
 
 export const sendWelcomeEmail = (email: string, walletAddress: string) =>
   transporter.sendMail({
-    from: `"TrustWork" <${env.SMTP_USER}>`,
+    from: `"TrustWork" <${env.EMAIL_FROM}>`,
     to: email,
     subject: 'Your TrustWork wallet address',
     html: `
@@ -29,7 +29,7 @@ export const sendWelcomeEmail = (email: string, walletAddress: string) =>
 
 export const sendNotificationEmail = (email: string, subject: string, html: string) =>
   transporter.sendMail({
-    from: `"TrustWork" <${env.SMTP_USER}>`,
+    from: `"TrustWork" <${env.EMAIL_FROM}>`,
     to: email,
     subject,
     html,
